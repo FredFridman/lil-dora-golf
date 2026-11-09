@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0d2a22" />
+  <title>Lil Dora Invitational — Streamsong 2027</title>
+  <meta name="description" content="Official home of the Lil Dora Invitational — Streamsong Resort, February 25–28, 2027." />
+  <style>
+    :root{
+      --ink:#10241e;
+      --ink-2:#1a352c;
+      --cream:#f7f1e4;
+      --sand:#e8dcc3;
+      --gold:#c29b52;
+      --gold-2:#e1c27b;
+      --green:#123c31;
+      --green-2:#1f5b49;
+      --muted:#6f7a73;
+      --white:#fffdf8;
+      --danger:#8f3b2f;
+      --shadow:0 18px 45px rgba(21,40,32,.12);
+      --radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(194,155,82,.16), transparent 28rem),
+        linear-gradient(180deg,#fbf8f1 0%,#f6f0e4 100%);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1180px,calc(100% - 32px));margin:auto}
+    .nav{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(16px);
+      background:rgba(247,241,228,.86);
+      border-bottom:1px solid rgba(16,36,30,.09);
+    }
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.04em}
+    .crest{
+      width:40px;height:40px;border-radius:50%;
+      display:grid;place-items:center;
+      background:linear-gradient(135deg,var(--green),var(--green-2));
+      color:var(--gold-2);box-shadow:0 8px 20px rgba(18,60,49,.24);
+      border:1px solid rgba(255,255,255,.2)
+    }
+    .nav-links{display:flex;gap:18px;font-size:14px;font-weight:700;color:var(--ink-2)}
+    .nav-links a:hover{color:var(--gold)}
+    .hero{
+      position:relative;overflow:hidden;
+      min-height:620px;display:grid;align-items:center;
+      background:
+        linear-gradient(90deg,rgba(8,28,23,.95) 0%,rgba(8,28,23,.83) 42%,rgba(8,28,23,.28) 100%),
+        radial-gradient(circle at 80% 20%, rgba(225,194,123,.28), transparent 18rem),
+        linear-gradient(135deg,#0b251e,#1d4a3d 58%,#9d8150);
+      color:var(--white);
+    }
+    .hero:after{
+      content:"";position:absolute;inset:auto -10% -28% 45%;height:85%;border-radius:50%;
+      background:radial-gradient(circle,rgba(255,255,255,.09),transparent 60%);
+      transform:rotate(-12deg)
+    }
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:76px 0}
+    .eyebrow{font-size:13px;letter-spacing:.23em;text-transform:uppercase;color:var(--gold-2);font-weight:800}
+    h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(52px,8vw,96px);line-height:.93;margin:14px 0 22px;letter-spacing:-.04em}
+    .hero p{font-size:19px;color:#e5eee9;max-width:660px}
+    .hero-stats{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+    .pill{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);padding:10px 14px;border-radius:999px;font-weight:700;font-size:14px}
+    .score-card{
+      position:relative;z-index:2;
+      background:linear-gradient(180deg,rgba(255,253,248,.96),rgba(245,239,225,.96));
+      color:var(--ink);
+      border:1px solid rgba(255,255,255,.42);
+      border-radius:30px;padding:28px;
+      box-shadow:0 28px 70px rgba(0,0,0,.26);
+      transform:rotate(1.2deg);
+    }
+    .score-card .top{display:flex;justify-content:space-between;gap:12px;align-items:center;padding-bottom:18px;border-bottom:1px solid rgba(16,36,30,.12)}
+    .score-card h3{margin:0;font-family:Georgia,serif;font-size:28px}
+    .score-row{display:grid;grid-template-columns:1fr auto;gap:18px;padding:15px 0;border-bottom:1px dashed rgba(16,36,30,.14)}
+    .score-row:last-child{border-bottom:0}
+    .score-row strong{font-size:20px}
+    .section{padding:86px 0}
+    .section.dark{background:var(--green);color:var(--white)}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:34px}
+    .section-head h2{font-family:Georgia,serif;font-size:clamp(36px,5vw,58px);line-height:1;margin:8px 0 0}
+    .section-head p{max-width:620px;color:var(--muted);margin:0}
+    .dark .section-head p{color:#c7d7d1}
+    .grid{display:grid;gap:20px}
+    .grid-4{grid-template-columns:repeat(4,1fr)}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .card{
+      background:rgba(255,253,248,.88);border:1px solid rgba(16,36,30,.08);
+      border-radius:var(--radius);box-shadow:var(--shadow);padding:24px
+    }
+    .dark .card{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.12);box-shadow:none}
+    .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:900}
+    .course h3,.card h3{font-family:Georgia,serif;margin:6px 0 8px;font-size:26px}
+    .time{font-size:34px;font-weight:900;letter-spacing:-.03em}
+    .subtle{color:var(--muted);font-size:14px}
+    .dark .subtle{color:#c7d7d1}
+    .course .times{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .tag{padding:7px 10px;border-radius:999px;background:#efe5d1;font-size:13px;font-weight:800}
+    .dark .tag{background:rgba(255,255,255,.10)}
+    .roster{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .player{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      padding:15px 16px;border-radius:16px;background:rgba(255,253,248,.75);
+      border:1px solid rgba(16,36,30,.08)
+    }
+    .hcp{font-weight:900;color:var(--green);min-width:48px;text-align:right}
+    .pairing-day{margin-top:24px}
+    .pairing-day>h3{font-family:Georgia,serif;font-size:34px;margin:0 0 16px}
+    .foursome{
+      display:grid;grid-template-columns:90px 1fr;gap:18px;
+      padding:19px 0;border-bottom:1px solid rgba(16,36,30,.1)
+    }
+    .foursome:last-child{border-bottom:0}
+    .tee{font-weight:900;color:var(--gold)}
+    .teams{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .team{background:#f2eadb;padding:12px 14px;border-radius:14px;font-weight:800}
+    .team span{font-weight:500;color:var(--muted)}
+    .rule-list{display:grid;gap:13px;margin-top:18px}
+    .rule{display:flex;gap:13px;align-items:flex-start}
+    .num{width:30px;height:30px;border-radius:50%;background:var(--gold);color:#10241e;display:grid;place-items:center;font-weight:900;flex:0 0 auto}
+    .stableford{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:18px}
+    .point{padding:18px 12px;border-radius:18px;background:#f1e8d6;text-align:center}
+    .point b{display:block;font-size:30px;color:var(--green)}
+    .purse-table{width:100%;border-collapse:collapse;margin-top:12px}
+    .purse-table td{padding:13px 8px;border-bottom:1px solid rgba(16,36,30,.10)}
+    .purse-table td:last-child{text-align:right;font-weight:900}
+    .purse-table tr:last-child td{border-bottom:0}
+    .leaderboard{
+      background:linear-gradient(135deg,#102f27,#1d4a3d);
+      color:white;border-radius:28px;padding:26px;overflow:hidden
+    }
+    .lb-head{display:grid;grid-template-columns:58px 1fr 90px 90px;gap:10px;padding:0 8px 12px;color:#b9cbc4;font-size:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:900}
+    .lb-row{display:grid;grid-template-columns:58px 1fr 90px 90px;gap:10px;padding:13px 8px;border-top:1px solid rgba(255,255,255,.09);align-items:center}
+    .pos{font-weight:900;color:var(--gold-2)}
+    .locked{opacity:.78;font-style:italic}
+    footer{padding:46px 0 58px;color:#6c756f;text-align:center;font-size:13px}
+    .callout{padding:18px 20px;border-radius:18px;background:#fff3d6;border:1px solid #e4c985;color:#58471d;margin-top:18px}
+    .mini{font-size:12px}
+    @media(max-width:900px){
+      .nav-links{display:none}
+      .hero-grid{grid-template-columns:1fr;padding:58px 0}
+      .score-card{transform:none}
+      .grid-4,.grid-3,.grid-2,.roster{grid-template-columns:1fr 1fr}
+      .teams{grid-template-columns:1fr}
+      .foursome{grid-template-columns:1fr}
+    }
+    @media(max-width:620px){
+      .wrap{width:min(100% - 22px,1180px)}
+      .grid-4,.grid-3,.grid-2,.roster,.stableford{grid-template-columns:1fr}
+      .hero{min-height:auto}
+      h1{font-size:54px}
+      .section{padding:62px 0}
+      .lb-head,.lb-row{grid-template-columns:40px 1fr 64px}
+      .lb-head>*:nth-child(4),.lb-row>*:nth-child(4){display:none}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">
+        <span class="crest">LD</span>
+        <span>LIL DORA INVITATIONAL</span>
+      </a>
+      <div class="nav-links">
+        <a href="#schedule">Schedule</a>
+        <a href="#players">Players</a>
+        <a href="#pairings">Pairings</a>
+        <a href="#rules">Rules</a>
+        <a href="#purse">Purse</a>
+        <a href="#leaderboard">Leaderboard</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Streamsong Resort · February 25–28, 2027</div>
+        <h1>Lil Dora<br>Invitational</h1>
+        <p>Sixteen players. Four championship rounds. One trophy. A long weekend of serious golf, rotating team battles, and absolutely no gimmes.</p>
+        <div class="hero-stats">
+          <div class="pill">16 Players</div>
+          <div class="pill">72-Hole Net Stableford</div>
+          <div class="pill">$4,000 Purse</div>
+          <div class="pill">Red · Black · Bone Valley · Blue</div>
+        </div>
+      </div>
+      <div class="score-card">
+        <div class="top">
+          <div>
+            <div class="kicker">Championship format</div>
+            <h3>Four rounds. Every point matters.</h3>
+          </div>
+          <div class="crest">72</div>
+        </div>
+        <div class="score-row"><span>Net double bogey or worse</span><strong>0</strong></div>
+        <div class="score-row"><span>Net bogey</span><strong>1</strong></div>
+        <div class="score-row"><span>Net par</span><strong>2</strong></div>
+        <div class="score-row"><span>Net birdie</span><strong>3</strong></div>
+        <div class="score-row"><span>Net eagle or better</span><strong>5</strong></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" id="schedule">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">The weekend</div>
+          <h2>Four days at Streamsong</h2>
+        </div>
+        <p>The Chain is a Friday side event. The championship itself runs through Sunday on Red, Black, Bone Valley and Blue.</p>
+      </div>
+
+      <div class="grid grid-4">
+        <div class="card course">
+          <div class="kicker">Thursday · Feb 25</div>
+          <h3>Streamsong Red</h3>
+          <div class="time">11:10 AM</div>
+          <div class="subtle">Championship Round 1</div>
+          <div class="times"><span class="tag">11:10</span><span class="tag">11:20</span><span class="tag">11:30</span><span class="tag">11:40</span></div>
+        </div>
+        <div class="card course">
+          <div class="kicker">Friday · Feb 26</div>
+          <h3>Streamsong Black</h3>
+          <div class="time">8:03 AM</div>
+          <div class="subtle">Championship Round 2</div>
+          <div class="times"><span class="tag">8:03</span><span class="tag">8:13</span><span class="tag">8:23</span><span class="tag">9:03</span></div>
+        </div>
+        <div class="card course">
+          <div class="kicker">Saturday · Feb 27</div>
+          <h3>Bone Valley</h3>
+          <div class="time">10:38 AM</div>
+          <div class="subtle">Championship Round 3</div>
+          <div class="times"><span class="tag">10:38</span><span class="tag">10:48</span><span class="tag">10:58</span><span class="tag">11:08</span></div>
+        </div>
+        <div class="card course">
+          <div class="kicker">Sunday · Feb 28</div>
+          <h3>Streamsong Blue</h3>
+          <div class="time">9:05 AM</div>
+          <div class="subtle">Championship Round 4</div>
+          <div class="times"><span class="tag">9:05</span><span class="tag">9:15</span><span class="tag">9:25</span><span class="tag">9:35</span></div>
+        </div>
+      </div>
+
+      <div class="callout"><strong>Friday afternoon:</strong> The Chain side event starts at 1:31 PM with tee times at 1:31, 1:41, 1:51 and 3:31. Cash side bets only — no tournament purse money.</div>
+    </div>
+  </section>
+
+  <section class="section dark" id="players">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">The field</div>
+          <h2>16 players</h2>
+        </div>
+        <p>Handicap Indexes shown below are the current working numbers. Championship scoring uses Playing Handicap, not raw index.</p>
+      </div>
+      <div class="roster">
+        <div class="player"><span>Isabela McMahon</span><span class="hcp">+4.4</span></div>
+        <div class="player"><span>Lucas Harz</span><span class="hcp">0.0</span></div>
+        <div class="player"><span>Preston Combs</span><span class="hcp">0.0</span></div>
+        <div class="player"><span>Alex Carlson</span><span class="hcp">1.4</span></div>
+        <div class="player"><span>Dave Gwinn</span><span class="hcp">6.1</span></div>
+        <div class="player"><span>Andrew Berg</span><span class="hcp">7.0</span></div>
+        <div class="player"><span>Hunter Hart</span><span class="hcp">7.7</span></div>
+        <div class="player"><span>Jason Singer</span><span class="hcp">7.8</span></div>
+        <div class="player"><span>Ryan Guerette</span><span class="hcp">8.3</span></div>
+        <div class="player"><span>Ryan Mikac</span><span class="hcp">15.5</span></div>
+        <div class="player"><span>Ross Davis</span><span class="hcp">18.0</span></div>
+        <div class="player"><span>Fred Fridman</span><span class="hcp">19.2</span></div>
+        <div class="player"><span>Nate Waller</span><span class="hcp">19.5</span></div>
+        <div class="player"><span>Evan Thomas</span><span class="hcp">20.0</span></div>
+        <div class="player"><span>Micah Oppenheim</span><span class="hcp">23.3</span></div>
+        <div class="player"><span>Sean Grzeck</span><span class="hcp">27.2</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pairings">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Foursomes + daily teams</div>
+          <h2>Pairings</h2>
+        </div>
+        <p>Each foursome contains two 2-man best-ball teams. Isabela McMahon and Hunter Hart are never in the same group.</p>
+      </div>
+
+      <div class="pairing-day card">
+        <h3>Thursday · Red</h3>
+        <div class="foursome"><div class="tee">11:10</div><div class="teams"><div class="team">Jason Singer + Ryan Mikac</div><div class="team">Hunter Hart + Sean Grzeck</div></div></div>
+        <div class="foursome"><div class="tee">11:20</div><div class="teams"><div class="team">Ryan Guerette + Dave Gwinn</div><div class="team">Alex Carlson + Evan Thomas</div></div></div>
+        <div class="foursome"><div class="tee">11:30</div><div class="teams"><div class="team">Fred Fridman + Isabela McMahon</div><div class="team">Andrew Berg + Micah Oppenheim</div></div></div>
+        <div class="foursome"><div class="tee">11:40</div><div class="teams"><div class="team">Lucas Harz + Nate Waller</div><div class="team">Preston Combs + Ross Davis</div></div></div>
+      </div>
+
+      <div class="pairing-day card">
+        <h3>Friday · Black</h3>
+        <div class="foursome"><div class="tee">8:03</div><div class="teams"><div class="team">Fred Fridman + Preston Combs</div><div class="team">Jason Singer + Micah Oppenheim</div></div></div>
+        <div class="foursome"><div class="tee">8:13</div><div class="teams"><div class="team">Lucas Harz + Evan Thomas</div><div class="team">Ryan Guerette + Andrew Berg</div></div></div>
+        <div class="foursome"><div class="tee">8:23</div><div class="teams"><div class="team">Isabela McMahon + Ryan Mikac</div><div class="team">Ross Davis + Sean Grzeck</div></div></div>
+        <div class="foursome"><div class="tee">9:03</div><div class="teams"><div class="team">Hunter Hart + Dave Gwinn</div><div class="team">Alex Carlson + Nate Waller</div></div></div>
+      </div>
+
+      <div class="pairing-day card">
+        <h3>Saturday · Bone Valley</h3>
+        <div class="foursome"><div class="tee">10:38</div><div class="teams"><div class="team">Hunter Hart + Sean Grzeck</div><div class="team">Ryan Guerette + Nate Waller</div></div></div>
+        <div class="foursome"><div class="tee">10:48</div><div class="teams"><div class="team">Isabela McMahon + Jason Singer</div><div class="team">Ross Davis + Evan Thomas</div></div></div>
+        <div class="foursome"><div class="tee">10:58</div><div class="teams"><div class="team">Andrew Berg + Preston Combs</div><div class="team">Dave Gwinn + Micah Oppenheim</div></div></div>
+        <div class="foursome"><div class="tee">11:08</div><div class="teams"><div class="team">Fred Fridman + Lucas Harz</div><div class="team">Alex Carlson + Ryan Mikac</div></div></div>
+      </div>
+
+      <div class="pairing-day card">
+        <h3>Sunday · Blue</h3>
+        <div class="foursome"><div class="tee">9:05</div><div class="teams"><div class="team">Lucas Harz + Ryan Mikac</div><div class="team">Ryan Guerette + Dave Gwinn</div></div></div>
+        <div class="foursome"><div class="tee">9:15</div><div class="teams"><div class="team">Isabela McMahon + Preston Combs</div><div class="team">Nate Waller + Evan Thomas</div></div></div>
+        <div class="foursome"><div class="tee">9:25</div><div class="teams"><div class="team">Fred Fridman + Hunter Hart</div><div class="team">Sean Grzeck + Micah Oppenheim</div></div></div>
+        <div class="foursome"><div class="tee">9:35</div><div class="teams"><div class="team">Jason Singer + Andrew Berg</div><div class="team">Alex Carlson + Ross Davis</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark" id="rules">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Competition rules</div>
+          <h2>Serious enough to matter.<br>Simple enough to move.</h2>
+        </div>
+        <p>The individual championship and team event can use different Playing Handicap allowances. Scores can be calculated centrally each day.</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Individual Championship</h3>
+          <p><strong>72-hole cumulative Net Stableford</strong> across Red, Black, Bone Valley and Blue.</p>
+          <div class="stableford">
+            <div class="point"><b>0</b><span>Net double+</span></div>
+            <div class="point"><b>1</b><span>Net bogey</span></div>
+            <div class="point"><b>2</b><span>Net par</span></div>
+            <div class="point"><b>3</b><span>Net birdie</span></div>
+            <div class="point"><b>5</b><span>Net eagle+</span></div>
+          </div>
+          <p class="mini">Working handicap recommendation: 95% of Course Handicap for the individual competition.</p>
+        </div>
+        <div class="card">
+          <h3>Daily 2-Man Best Ball</h3>
+          <p>Two-man teams compete every championship round. Each player plays his or her own ball; the better net score on each hole counts for the team.</p>
+          <p><strong>1st team:</strong> $300 &nbsp; · &nbsp; <strong>2nd team:</strong> $100 each day.</p>
+          <p class="mini">Working handicap recommendation: 85% of Course Handicap for the team event.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-2" style="margin-top:20px">
+        <div class="card">
+          <h3>Playing Rules</h3>
+          <div class="rule-list">
+            <div class="rule"><span class="num">1</span><div><strong>Ready golf.</strong> If you are ready and it is safe, hit.</div></div>
+            <div class="rule"><span class="num">2</span><div><strong>Every putt is holed.</strong> No gimmes.</div></div>
+            <div class="rule"><span class="num">3</span><div><strong>Clean and place in the fairway.</strong> Within 6 inches, no closer to the hole, remaining in the fairway.</div></div>
+            <div class="rule"><span class="num">4</span><div><strong>No mulligans.</strong> No breakfast balls.</div></div>
+            <div class="rule"><span class="num">5</span><div><strong>Local rules govern.</strong> Streamsong local rules take precedence.</div></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Gross Championship</h3>
+          <p>A separate 72-hole gross title is awarded to the lowest actual stroke total.</p>
+          <p>To remain eligible for the gross championship, a player must return a complete 72-hole gross score and hole out every hole.</p>
+          <p class="mini">The gross title is secondary to the Lil Dora Net Championship but carries a dedicated purse.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="purse">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">$250 × 16 players</div>
+          <h2>$4,000 tournament purse</h2>
+        </div>
+        <p>The Chain is excluded from the formal purse and handled entirely through cash side bets.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Overall prizes</h3>
+          <table class="purse-table">
+            <tr><td>🏆 Net Champion</td><td>$1,000</td></tr>
+            <tr><td>Net 2nd</td><td>$600</td></tr>
+            <tr><td>Net 3rd</td><td>$300</td></tr>
+            <tr><td>Gross Champion</td><td>$500</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Daily team prizes</h3>
+          <table class="purse-table">
+            <tr><td>1st-place team × 4 days</td><td>$1,200</td></tr>
+            <tr><td>2nd-place team × 4 days</td><td>$400</td></tr>
+            <tr><td><strong>Total team purse</strong></td><td><strong>$1,600</strong></td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="leaderboard">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Live during tournament week</div>
+          <h2>Leaderboard</h2>
+        </div>
+        <p>This version is ready for daily updates. Replace the placeholder rows with actual Stableford totals and gross scores after each round.</p>
+      </div>
+      <div class="leaderboard">
+        <div class="lb-head"><span>Pos</span><span>Player</span><span>Net pts</span><span>Gross</span></div>
+        <div class="lb-row locked"><span class="pos">—</span><span>Leaderboard opens after Round 1</span><span>—</span><span>—</span></div>
+        <div class="lb-row locked"><span class="pos">—</span><span>Thursday · Streamsong Red</span><span>—</span><span>—</span></div>
+        <div class="lb-row locked"><span class="pos">—</span><span>Friday · Streamsong Black</span><span>—</span><span>—</span></div>
+        <div class="lb-row locked"><span class="pos">—</span><span>Saturday · Bone Valley</span><span>—</span><span>—</span></div>
+        <div class="lb-row locked"><span class="pos">—</span><span>Sunday · Streamsong Blue</span><span>—</span><span>—</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <strong>Lil Dora Invitational · Streamsong Resort · February 25–28, 2027</strong><br>
+      Four days. Sixteen players. No gimmes.
+    </div>
+  </footer>
+</body>
+</html>
