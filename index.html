@@ -165,7 +165,21 @@
       .lb-head,.lb-row{grid-template-columns:40px 1fr 64px}
       .lb-head>*:nth-child(4),.lb-row>*:nth-child(4){display:none}
     }
-  </style>
+  
+:root{--muted:#536158}body{font-size:16px}section[id],header[id]{scroll-margin-top:140px}
+.hero{min-height:auto}.hero-grid{grid-template-columns:1fr;padding:60px 0}.hero:after{pointer-events:none}
+.player{color:var(--ink);background:var(--white)}.point{color:var(--ink)}.mini{font-size:14px}
+.kicker,.tee{color:#79591f}.dark .kicker{color:var(--gold-2)}
+.tee{white-space:nowrap;font-size:18px;font-variant-numeric:tabular-nums}.foursome{grid-template-columns:112px minmax(0,1fr)}
+.times,.course .times{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:16px}
+.tag{display:block;text-align:center;border-radius:8px;font-size:16px;padding:10px 8px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.callout .times{max-width:440px}.card,.team,.player{min-width:0}a:focus-visible{outline:3px solid #98702b;outline-offset:4px}
+@media(max-width:1100px){.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.nav-inner{height:auto;flex-direction:column;align-items:stretch;gap:4px;padding-top:12px}.brand{font-size:14px}.crest{flex-shrink:0}.nav-links{display:flex;overflow-x:auto;gap:20px;white-space:nowrap;padding:0 0 6px}.nav-links a{display:flex;align-items:center;min-height:44px}.section-head{align-items:flex-start;flex-direction:column;gap:16px}.foursome{grid-template-columns:1fr;gap:10px}.stableford{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:620px){.wrap{width:calc(100% - 32px)}.hero-grid{padding:40px 0}h1{font-size:clamp(46px,12vw,68px);line-height:1.02}.eyebrow{font-size:12px;letter-spacing:.1em;line-height:1.7}.hero p{font-size:18px}.hero-stats{gap:8px;margin-top:22px}.pill{font-size:13px;padding:8px 10px}.section{padding:44px 0}.section-head{margin-bottom:24px}.section-head h2{font-size:36px;line-height:1.1}.grid-4,.grid-3,.grid-2,.roster{grid-template-columns:minmax(0,1fr)}.card{padding:20px;border-radius:18px}.pairing-day>h3{font-size:28px}.teams{gap:8px}.team{font-size:16px;font-weight:600}.stableford{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.point{padding:12px 8px}.leaderboard{padding:18px 10px;border-radius:18px}.lb-head,.lb-row{grid-template-columns:26px minmax(0,1fr) 45px 45px;gap:6px;font-size:14px}.lb-head{font-size:10px;letter-spacing:0}.lb-head>*:nth-child(4),.lb-row>*:nth-child(4){display:block}.purse-table td{padding:12px 4px}footer{font-size:14px;padding:32px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+</style>
 </head>
 <body>
   <nav class="nav">
@@ -190,27 +204,13 @@
       <div>
         <div class="eyebrow">Streamsong Resort · February 25–28, 2027</div>
         <h1>Lil Dora<br>Invitational</h1>
-        <p>Sixteen players. Four championship rounds. One trophy. A long weekend of serious golf, rotating team battles, and absolutely no gimmes.</p>
+        <p>Benefiting St. Jude Children’s Research Hospital. Sixteen players, four championship rounds. Lots of fun, and no gimmies.</p>
         <div class="hero-stats">
           <div class="pill">16 Players</div>
           <div class="pill">72-Hole Net Stableford</div>
           <div class="pill">$4,000 Purse</div>
           <div class="pill">Red · Black · Bone Valley · Blue</div>
         </div>
-      </div>
-      <div class="score-card">
-        <div class="top">
-          <div>
-            <div class="kicker">Championship format</div>
-            <h3>Four rounds. Every point matters.</h3>
-          </div>
-          <div class="crest">72</div>
-        </div>
-        <div class="score-row"><span>Net double bogey or worse</span><strong>0</strong></div>
-        <div class="score-row"><span>Net bogey</span><strong>1</strong></div>
-        <div class="score-row"><span>Net par</span><strong>2</strong></div>
-        <div class="score-row"><span>Net birdie</span><strong>3</strong></div>
-        <div class="score-row"><span>Net eagle or better</span><strong>5</strong></div>
       </div>
     </div>
   </header>
@@ -222,41 +222,36 @@
           <div class="kicker">The weekend</div>
           <h2>Four days at Streamsong</h2>
         </div>
-        <p>The Chain is a Friday side event. The championship itself runs through Sunday on Red, Black, Bone Valley and Blue.</p>
       </div>
 
       <div class="grid grid-4">
         <div class="card course">
           <div class="kicker">Thursday · Feb 25</div>
           <h3>Streamsong Red</h3>
-          <div class="time">11:10 AM</div>
-          <div class="subtle">Championship Round 1</div>
-          <div class="times"><span class="tag">11:10</span><span class="tag">11:20</span><span class="tag">11:30</span><span class="tag">11:40</span></div>
+                    <div class="subtle">Championship Round 1</div>
+          <div class="times"><span class="tag">11:10 AM</span><span class="tag">11:20 AM</span><span class="tag">11:30 AM</span><span class="tag">11:40 AM</span></div>
         </div>
         <div class="card course">
           <div class="kicker">Friday · Feb 26</div>
           <h3>Streamsong Black</h3>
-          <div class="time">8:03 AM</div>
-          <div class="subtle">Championship Round 2</div>
-          <div class="times"><span class="tag">8:03</span><span class="tag">8:13</span><span class="tag">8:23</span><span class="tag">9:03</span></div>
+                    <div class="subtle">Championship Round 2</div>
+          <div class="times"><span class="tag">8:03 AM</span><span class="tag">8:13 AM</span><span class="tag">8:23 AM</span><span class="tag">9:03 AM</span></div>
         </div>
         <div class="card course">
           <div class="kicker">Saturday · Feb 27</div>
           <h3>Bone Valley</h3>
-          <div class="time">10:38 AM</div>
-          <div class="subtle">Championship Round 3</div>
-          <div class="times"><span class="tag">10:38</span><span class="tag">10:48</span><span class="tag">10:58</span><span class="tag">11:08</span></div>
+                    <div class="subtle">Championship Round 3</div>
+          <div class="times"><span class="tag">10:38 AM</span><span class="tag">10:48 AM</span><span class="tag">10:58 AM</span><span class="tag">11:08 AM</span></div>
         </div>
         <div class="card course">
           <div class="kicker">Sunday · Feb 28</div>
           <h3>Streamsong Blue</h3>
-          <div class="time">9:05 AM</div>
-          <div class="subtle">Championship Round 4</div>
-          <div class="times"><span class="tag">9:05</span><span class="tag">9:15</span><span class="tag">9:25</span><span class="tag">9:35</span></div>
+                    <div class="subtle">Championship Round 4</div>
+          <div class="times"><span class="tag">9:05 AM</span><span class="tag">9:15 AM</span><span class="tag">9:25 AM</span><span class="tag">9:35 AM</span></div>
         </div>
       </div>
 
-      <div class="callout"><strong>Friday afternoon:</strong> The Chain side event starts at 1:31 PM with tee times at 1:31, 1:41, 1:51 and 3:31. Cash side bets only — no tournament purse money.</div>
+      <div class="callout"><strong>Friday afternoon · The Chain</strong><div>Cash side bets only.</div><div class="times"><span class="tag">1:31 PM</span><span class="tag">1:41 PM</span><span class="tag">1:51 PM</span><span class="tag">3:31 PM</span></div></div>
     </div>
   </section>
 
@@ -267,7 +262,7 @@
           <div class="kicker">The field</div>
           <h2>16 players</h2>
         </div>
-        <p>Handicap Indexes shown below are the current working numbers. Championship scoring uses Playing Handicap, not raw index.</p>
+        <p>Current Handicap Indexes. Playing Handicaps will be used for scoring.</p>
       </div>
       <div class="roster">
         <div class="player"><span>Isabela McMahon</span><span class="hcp">+4.4</span></div>
@@ -297,39 +292,38 @@
           <div class="kicker">Foursomes + daily teams</div>
           <h2>Pairings</h2>
         </div>
-        <p>Each foursome contains two 2-man best-ball teams.</p>
       </div>
 
       <div class="pairing-day card">
         <h3>Thursday · Red</h3>
-        <div class="foursome"><div class="tee">11:10</div><div class="teams"><div class="team">Jason Singer + Ryan Mikac</div><div class="team">Hunter Hart + Sean Grzeck</div></div></div>
-        <div class="foursome"><div class="tee">11:20</div><div class="teams"><div class="team">Ryan Guerette + Dave Gwinn</div><div class="team">Alex Carlson + Evan Thomas</div></div></div>
-        <div class="foursome"><div class="tee">11:30</div><div class="teams"><div class="team">Fred Fridman + Isabela McMahon</div><div class="team">Andrew Berg + Micah Oppenheim</div></div></div>
-        <div class="foursome"><div class="tee">11:40</div><div class="teams"><div class="team">Lucas Harz + Nate Waller</div><div class="team">Preston Combs + Ross Davis</div></div></div>
+        <div class="foursome"><div class="tee">11:10 AM</div><div class="teams"><div class="team">Jason Singer + Ryan Mikac</div><div class="team">Hunter Hart + Sean Grzeck</div></div></div>
+        <div class="foursome"><div class="tee">11:20 AM</div><div class="teams"><div class="team">Ryan Guerette + Dave Gwinn</div><div class="team">Alex Carlson + Evan Thomas</div></div></div>
+        <div class="foursome"><div class="tee">11:30 AM</div><div class="teams"><div class="team">Fred Fridman + Isabela McMahon</div><div class="team">Andrew Berg + Micah Oppenheim</div></div></div>
+        <div class="foursome"><div class="tee">11:40 AM</div><div class="teams"><div class="team">Lucas Harz + Nate Waller</div><div class="team">Preston Combs + Ross Davis</div></div></div>
       </div>
 
       <div class="pairing-day card">
         <h3>Friday · Black</h3>
-        <div class="foursome"><div class="tee">8:03</div><div class="teams"><div class="team">Fred Fridman + Preston Combs</div><div class="team">Jason Singer + Micah Oppenheim</div></div></div>
-        <div class="foursome"><div class="tee">8:13</div><div class="teams"><div class="team">Lucas Harz + Evan Thomas</div><div class="team">Ryan Guerette + Andrew Berg</div></div></div>
-        <div class="foursome"><div class="tee">8:23</div><div class="teams"><div class="team">Isabela McMahon + Ryan Mikac</div><div class="team">Ross Davis + Sean Grzeck</div></div></div>
-        <div class="foursome"><div class="tee">9:03</div><div class="teams"><div class="team">Hunter Hart + Dave Gwinn</div><div class="team">Alex Carlson + Nate Waller</div></div></div>
+        <div class="foursome"><div class="tee">8:03 AM</div><div class="teams"><div class="team">Fred Fridman + Preston Combs</div><div class="team">Jason Singer + Micah Oppenheim</div></div></div>
+        <div class="foursome"><div class="tee">8:13 AM</div><div class="teams"><div class="team">Lucas Harz + Evan Thomas</div><div class="team">Ryan Guerette + Andrew Berg</div></div></div>
+        <div class="foursome"><div class="tee">8:23 AM</div><div class="teams"><div class="team">Isabela McMahon + Ryan Mikac</div><div class="team">Ross Davis + Sean Grzeck</div></div></div>
+        <div class="foursome"><div class="tee">9:03 AM</div><div class="teams"><div class="team">Hunter Hart + Dave Gwinn</div><div class="team">Alex Carlson + Nate Waller</div></div></div>
       </div>
 
       <div class="pairing-day card">
         <h3>Saturday · Bone Valley</h3>
-        <div class="foursome"><div class="tee">10:38</div><div class="teams"><div class="team">Hunter Hart + Sean Grzeck</div><div class="team">Ryan Guerette + Nate Waller</div></div></div>
-        <div class="foursome"><div class="tee">10:48</div><div class="teams"><div class="team">Isabela McMahon + Jason Singer</div><div class="team">Ross Davis + Evan Thomas</div></div></div>
-        <div class="foursome"><div class="tee">10:58</div><div class="teams"><div class="team">Andrew Berg + Preston Combs</div><div class="team">Dave Gwinn + Micah Oppenheim</div></div></div>
-        <div class="foursome"><div class="tee">11:08</div><div class="teams"><div class="team">Fred Fridman + Lucas Harz</div><div class="team">Alex Carlson + Ryan Mikac</div></div></div>
+        <div class="foursome"><div class="tee">10:38 AM</div><div class="teams"><div class="team">Hunter Hart + Sean Grzeck</div><div class="team">Ryan Guerette + Nate Waller</div></div></div>
+        <div class="foursome"><div class="tee">10:48 AM</div><div class="teams"><div class="team">Isabela McMahon + Jason Singer</div><div class="team">Ross Davis + Evan Thomas</div></div></div>
+        <div class="foursome"><div class="tee">10:58 AM</div><div class="teams"><div class="team">Andrew Berg + Preston Combs</div><div class="team">Dave Gwinn + Micah Oppenheim</div></div></div>
+        <div class="foursome"><div class="tee">11:08 AM</div><div class="teams"><div class="team">Fred Fridman + Lucas Harz</div><div class="team">Alex Carlson + Ryan Mikac</div></div></div>
       </div>
 
       <div class="pairing-day card">
         <h3>Sunday · Blue</h3>
-        <div class="foursome"><div class="tee">9:05</div><div class="teams"><div class="team">Lucas Harz + Ryan Mikac</div><div class="team">Ryan Guerette + Dave Gwinn</div></div></div>
-        <div class="foursome"><div class="tee">9:15</div><div class="teams"><div class="team">Isabela McMahon + Preston Combs</div><div class="team">Nate Waller + Evan Thomas</div></div></div>
-        <div class="foursome"><div class="tee">9:25</div><div class="teams"><div class="team">Fred Fridman + Hunter Hart</div><div class="team">Sean Grzeck + Micah Oppenheim</div></div></div>
-        <div class="foursome"><div class="tee">9:35</div><div class="teams"><div class="team">Jason Singer + Andrew Berg</div><div class="team">Alex Carlson + Ross Davis</div></div></div>
+        <div class="foursome"><div class="tee">9:05 AM</div><div class="teams"><div class="team">Lucas Harz + Ryan Mikac</div><div class="team">Ryan Guerette + Dave Gwinn</div></div></div>
+        <div class="foursome"><div class="tee">9:15 AM</div><div class="teams"><div class="team">Isabela McMahon + Preston Combs</div><div class="team">Nate Waller + Evan Thomas</div></div></div>
+        <div class="foursome"><div class="tee">9:25 AM</div><div class="teams"><div class="team">Fred Fridman + Hunter Hart</div><div class="team">Sean Grzeck + Micah Oppenheim</div></div></div>
+        <div class="foursome"><div class="tee">9:35 AM</div><div class="teams"><div class="team">Jason Singer + Andrew Berg</div><div class="team">Alex Carlson + Ross Davis</div></div></div>
       </div>
     </div>
   </section>
@@ -339,9 +333,8 @@
       <div class="section-head">
         <div>
           <div class="kicker">Competition rules</div>
-          <h2>Serious enough to matter.<br>Simple enough to move.</h2>
+          <h2>Tournament rules</h2>
         </div>
-        <p>The individual championship and team event can use different Playing Handicap allowances. Scores can be calculated centrally each day.</p>
       </div>
 
       <div class="grid grid-2">
@@ -358,8 +351,8 @@
           <p class="mini">Working handicap recommendation: 95% of Course Handicap for the individual competition.</p>
         </div>
         <div class="card">
-          <h3>Daily 2-Man Best Ball</h3>
-          <p>Two-man teams compete every championship round. Each player plays his or her own ball; the better net score on each hole counts for the team.</p>
+          <h3>Daily 2-Person Best Ball</h3>
+          <p>Two-person teams compete every championship round. Each player plays his or her own ball; the better net score on each hole counts for the team.</p>
           <p><strong>1st team:</strong> $300 &nbsp; · &nbsp; <strong>2nd team:</strong> $100 each day.</p>
           <p class="mini">Working handicap recommendation: 85% of Course Handicap for the team event.</p>
         </div>
@@ -424,7 +417,7 @@
           <div class="kicker">Live during tournament week</div>
           <h2>Leaderboard</h2>
         </div>
-        <p>This version is ready for daily updates. Replace the placeholder rows with actual Stableford totals and gross scores after each round.</p>
+        <p>Scores will be posted after each round.</p>
       </div>
       <div class="leaderboard">
         <div class="lb-head"><span>Pos</span><span>Player</span><span>Net pts</span><span>Gross</span></div>
